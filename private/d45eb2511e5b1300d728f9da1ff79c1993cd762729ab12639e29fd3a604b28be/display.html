@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .image-container {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .loading {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container" id="imageContainer">
+        <p class="loading">Loading...</p>
+    </div>
+
+    <script>
+        // Function to get query parameter from URL
+        function getQueryParam() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            return urlParams.get('query');
+        }
+
+        function displayImage(imageDictionary) {
+            const query = getQueryParam();
+            const container = document.getElementById('imageContainer');
+            container.innerHTML = ''; // Clear loading message
+
+            if (!query) {
+                container.innerHTML = '<p class="error">No query parameter found. Add ?query=something to the URL.</p>';
+                return;
+            }
+
+            const imagePath = imageDictionary[query.toLowerCase()];
+            
+            if (!imagePath) {
+                container.innerHTML = `<p class="error">No image found for query: ${query}</p>`;
+                return;
+            }
+
+            const img = document.createElement('img');
+            img.src = imagePath;
+            img.alt = query;
+            container.appendChild(img);
+        }
+
+        async function init() {
+            try {
+                const response = await fetch('https://science-direct.github.io/admin/sgdhkjfgksdsdng.json');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const imageDictionary = await response.json();
+                displayImage(imageDictionary);
+            } catch (error) {
+                const container = document.getElementById('imageContainer');
+                container.innerHTML = `<p class="error">Error loading data: ${error.message}</p>`;
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
