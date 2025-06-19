@@ -9,6 +9,8 @@
   --col-asso-dark: #333333;
   --col-generic-special-spanlight-bright: #045a51;
   --col-generic-special-highlight-bright: #558ed8;
+  
+  --padding-index-functional-default: 20px;
 }
 
 * {
@@ -16,6 +18,19 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.og-div {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  padding: var(--padding-index-functional-default);
+}
+
+.og-div .content {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
