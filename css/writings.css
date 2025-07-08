@@ -56,11 +56,21 @@ blockquote {
     font-size: 25px;
 }
 
+.tip{
+    margin: 0;
+    margin-left: 15px;
+    text-align: left;
+    padding: 10px;
+    background-color: var(--col-elevate);
+    border: 2px var(--col-gray-op) solid;
+    box-shadow: 3px 5px 2px var(--col-gray);
+}
+
 .Generic-Header-Main {
     flex-direction: column;
     display: flex;
     flex-wrap: wrap;
-    width: 100%; 
+    width: 100%;
     flex-direction: row;
 }
 
@@ -69,19 +79,28 @@ blockquote {
     width: calc(50% - 1vw);
 }
 
-@media (min-width: 1000px) {
-.Generic-Header-Main {
-    flex-direction: row;
+.Tip{
+    flex-direction: column;
+    width: 100%;
 }
 
-.Generic-Header-Sub {
-    flex: 1;
-    min-width: 200px; 
-}
+@media (min-width: 1000px) {
+    .Generic-Header-Main {
+        flex-direction: row;
+    }
+
+    .Generic-Header-Sub {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .Tip{
+        flex-direction: row;
+    }
 }
 
 @media (max-width: 480px) {
-.Generic-Header-Sub {
-    width: 100%;
-}
+    .Generic-Header-Sub {
+        width: 100%;
+    }
 }

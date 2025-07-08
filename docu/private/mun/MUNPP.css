@@ -1,0 +1,46 @@
+body {
+  margin: 20px auto;
+  max-width: 800px
+}
+
+@media (max-width: 850px) {
+  body{
+    margin: 20px;
+  }
+}
+
+article p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12pt;
+  text-align: justify;
+  text-indent: 20px;
+}
+
+.header {
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+span {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 7pt;
+  font-weight: bold;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.signature{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.signature h2{
+  text-align: right;
+}

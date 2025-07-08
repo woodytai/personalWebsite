@@ -1,7 +1,7 @@
 # All crawling activities on this site are bound by this Crawling Terms and Conditions.
 # See http://woodytai.github.io/admin/crawling-terms
 
-# This is a robots.txt for https://woodytai.github.io
+# This is a robots.txt for https://woodytai.com
 
 User-agent: *
 Disallow: /admin/*
@@ -9,6 +9,7 @@ Disallow: /private/*
 Disallow: /SUP_private/
 Disallow: *?
 Disallow: *.html&
+Disallow: */mun/*
 Disallow: /404
 
 # User-agent: Googlebot
@@ -16,8 +17,6 @@ Disallow: /404
 # User-agent: Slurp
 # User-agent: Twitterbot
 
-User-agent: Selenium
-Disallow: /
 
 # AI sources
 # User-agent: Googlebot
@@ -39,4 +38,4 @@ Disallow: /
 # User-agent: Bytespider
 
 
-Sitemap: https://woodytai.github.io/admin/sitemap
+Sitemap: https://woodytai.com/sitemap.xml

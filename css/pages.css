@@ -757,6 +757,7 @@ img {
   font-size: 2.5vh;
   line-height: 2.6vh;
   text-indent: 20px;
+  color: var(--col-off-bright);
 }
 
 .FAQContainer .answer h6 a {
@@ -775,6 +776,7 @@ img {
 @media (min-width: 600px) {
   .FAQContainer .answer h6 {
     text-indent: 0px;
+    color: var(--col-asso-bright);
   }
 
   .FAQContainer .listArrow {

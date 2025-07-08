@@ -17,6 +17,12 @@
   <loc>https://woodytai.com/linktree</loc>
   <lastmod>2025-01-01T00:00:00+08:00</lastmod>
   <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://woodytai.com/media-kit/</loc>
+  <lastmod>2025-01-25T00:00:00+08:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.95</priority>
 </url>
 <url>
