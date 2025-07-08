@@ -16,9 +16,15 @@ article p{
   text-indent: 20px;
 }
 
+article h2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12pt;
+  text-align: left;
+  text-decoration: underline black;
+}
+
 .header {
   font-size: 12pt;
-  font-weight: bold;
   text-align: left;
   font-family: 'Courier New', Courier, monospace;
 }
